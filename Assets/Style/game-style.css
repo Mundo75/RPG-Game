@@ -1,0 +1,20 @@
+body {
+    background-image: url(../Images/octogon.jpg);
+    background-size: cover; 
+    
+}
+
+.divHeading {
+    font-family: 'audiowide', cursive;
+    font-size: 150%;
+   
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+#textWaitHere {
+    font-family: 'audiowide', cursive;
+    color: gold;
+    padding-top: 0px;
+
+}
