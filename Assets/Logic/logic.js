@@ -1,11 +1,11 @@
-$(document).ready(function() {
+//$(document).ready(function() {
 
     //Set up object storing manager properties 
     var medAireManagers = {
 
         "Diann": {
             name: "Diann \"the Dream\" Weaverling",
-            image: "",
+            image: "Assets/Images/diann.png",
             audio: "",
             life: 100,
             attack: 10,
@@ -15,7 +15,7 @@ $(document).ready(function() {
 
         "Timur": {
             name: "Timur \"The Siberian Express\" Dury",
-            image: "",
+            image: "Assets/Images/Timur.jpg",
             audio: "",
             life: 140,
             attack: 15,
@@ -26,7 +26,7 @@ $(document).ready(function() {
 
         "Will": {
             name: "\"wild\" Will Mason",
-            image: "",
+            image: "Assets/Images/will.png",
             audio: "",
             life: 120,
             attack: 8,
@@ -35,7 +35,7 @@ $(document).ready(function() {
     
         "Gerri": {
             name: "Gerri \"The Dragon\" Kania",
-            image: "",
+            image: "Assets/Images/gerri.jpg",
             audio: "",
             life: 120,
             attack: 8,
@@ -46,9 +46,26 @@ $(document).ready(function() {
 
     //Declare global variables
     var villians = [];
-    var hero = Null;
-    var opponent = Null;
+    var hero;
+    var opponent;
     
-    //Get fighter images to the screen for player selection
+    //Create fighter and Get fighter images to the screen for player selection. Will require new divs written to HTML
+    var setUpGame = function(manager, managerDiv) {
+
+        var fighterCard = $("<div class='manager' data=name='" + medAireManagers.name + "'>");
+        var fightername = $("<div class='fighter-name'>").text(medAireManagers.name);
+        var fighterImage = $("img alt='image' class='manager-image'>").attr("src", medAireManagers.image);
+        var fighterLife = $("<div class='manager-life'>").text(medAireManagers.life);
+        fighterCard.append(fightername).append(fighterImage).append(fighterLife);
+        $("managerArea").append(fighterCard);
+    };
+
+    var startGame = function() {
+
+        for (var key in medAireManagers) {
+            setUpGame(medAireManagers[key], ".breakRoom");
+        };
+    };
+    startGame();
     
-});
+//});
