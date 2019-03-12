@@ -14,7 +14,7 @@ $(document).ready(function() {
         life: 140,
         attack: 8,
         audio: "http://www.moviewavs.com/php/sounds/?id=bst&media=MP3S&type=TV_Shows&movie=Seinfeld&quote=sdingo.txt&file=sdingo.mp3",
-        image: "assets/images/obi-wan.jpg",
+        image: "Assets/Images/diann.jpg",
         retaliation: 15
       },
 
@@ -23,7 +23,7 @@ $(document).ready(function() {
         life: 120,
         attack: 10,
         audio: "http://www.moviewavs.com/php/sounds/?id=bst&media=MP3S&type=Movies&movie=Airplane&quote=amphetim.txt&file=amphetim.mp3",
-        image: "assets/images/luke-skywalker.jpg",
+        image: "Assets/Images/Will.jpg",
         retaliation: 5
       },
       "Gerri \"The Dragon\" Kania": {
@@ -31,15 +31,15 @@ $(document).ready(function() {
         life: 180,
         attack: 7,
         audio: "../assets/Audio/WWE Wrestling.mp3",
-        image: "assets/images/darth-sidious.png",
+        image: "Assets/Images/gerri.jpg",
         retaliation: 20
       },
-      "Timur \"The Siberian Express\" Dury": {
-        name: "Timur \"The Siberian Express\" Dury",
+      "Timur \"The Siberian Express\" Dorri": {
+        name: "Timur \"The Siberian Express\" Drrri",
         life: 160,
         attack: 6,
         audio: "http://www.moviewavs.com/php/sounds/?id=gog&media=MP3S&type=Movies&movie=Team_America_World_Police&quote=sostupid.txt&file=sostupid.mp3",
-        image: "assets/images/darth-maul.jpg",
+        image: "Assets/Images/Timur.jpg",
         retaliation: 25
       }
     };
