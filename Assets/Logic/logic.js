@@ -129,10 +129,66 @@ $(document).ready(function() {
       }
     });
   
-    
+    //creat on click event to trigger the fight action -- add and/or subtract life points based on the attackers attack value
+    //trigger text messages after each attack to indicate damage done and update fighter stats on thier card
+    $("#actionButton").on("click", function() {
+     
+      if ($("#opponent").children().length !== 0) {
+        
+        var attackMessage = "Good Point!!  You stun " + evilManager.name + " and take " + hero.attack * round + " life points.";
+        var counterAttackMessage = "But " + evilManager.name + " strikes back hard taking " + evilManager.retaliation + " of your life points.";
+        clearPlayByPlay();
+  
+        evilManager.life -= hero.attack * round;
+               
+        if (evilManager.life > 0) {
+          
+          refreshStats(evilManager, "#opponent");
+          gameText(attackMessage);
+          gameText(counterAttackMessage);
+  
+          // update life and attack values for next round
+          hero.life -= evilManager.retaliation;
+          refreshStats(hero, "#Hero");
+  
+          //Check for loss of round - if hero life is = to 0 alert loss message in Play by play text box
+          if(hero.life <= 0) {
+            $("#badGuyList").hide();
+            clearPlayByPlay();
+            $("#CEO").show("slow");
+            fightAgain("You Lose!!! You have been transferred to PHL!!!      GAME OVER!!!");
+            $("#actionButton").off("click");
+          }
+        }
+        else {
+          $("#opponent").empty();
+  
+          var gameStateMessage = "You have defeated " + evilManager.name + ", you can choose to fight another enemy.";
+          gameText(gameStateMessage);
+          kills++;
   
           // Check for win the game
-         
+          if (kills >= villians.length) {
+            clearPlayByPlay();
+            $("#actionButton").off("click");
+            $("#CEO").show("slow")
+            fightAgain("You Won!!!! The Client is Happy!!!");
+          }
+        }
+        round++;
+      }
+      else {
+        // Show text to alert the player that they have not selected an opponent.
+        clearPlayByPlay();
+        gameText("No soup for you PICK ANOTHER MANAGER TO FIGHT!!");
+      }
+    });
+    //change the fighter stats to reflect the results of their present fight.  Change life on fighter card
+    var refreshStats = function(fighterCard, gameBoardArea) {
+      
+      $(gameBoardArea).empty();
+      initialGameBoard(fighterCard, gameBoardArea);
+    };
 
     var fightAgain = function(finalText) {
         var restart = $("<button class='centerSection' id='restartButton'>Who's Next</button>").click(function() {
