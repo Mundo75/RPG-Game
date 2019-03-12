@@ -23,3 +23,60 @@ button {
 }
 
 
+.mainText {
+    font-family: 'audiowide', cursive;
+    font-size: 150%;   
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+
+#playByPlay {
+    font-family: 'audiowide', cursive;
+    color: white;
+    margin-top: 10px;
+   
+}
+
+.manager {
+    width: 155px;
+    display: inline-block;
+    background-color: white;
+    border-color: green;
+    border-style: solid;
+    border-width: 3px;
+}
+
+.managerImage {
+    padding-right: 16px;
+    padding-left: 16px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.managerLife {
+    text-align: center;
+  }
+
+.managerTitle {
+    text-align: center;
+}
+
+#action .manager {
+    color: white;
+    background-color: black;
+}
+
+#restartButton {
+    margin-left: 45%;
+    background-color: blue;
+    color: white;
+    margin-top: 0%;
+     
+}
+  
+#CEO {
+    width: 130%;
+    height: 90%;
+    border: 2px solid maroon;
+}

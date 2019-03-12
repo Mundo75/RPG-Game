@@ -44,7 +44,7 @@ $(document).ready(function() {
       }
     };
   
-  //Play sound byte at page open   
+  //Add CEO content to play by play text div 
   $("#playByPlay").append("You managers had better come up with the correct root cause and make the customer happy, or i'll ship the lot of you to our Philadelphia office.  I don't care if you have to fight to the death.")
   
     
@@ -54,9 +54,8 @@ $(document).ready(function() {
       
       var managerCard = $("<div class='manager' data-name='" + manager.name + "'>");
       var managerName = $("<div class='managerTitle'>").text(manager.name);
-      var managerImage = $("<img alt='image' class='managerImage'>").attr("src", manager.image);
       var managerLife = $("<div class='managerLife'>").text(manager.life);
-
+      var managerImage = $("<img alt='image' class='managerImage'>").attr("src", manager.image);
       
       managerCard.append(managerName).append(managerImage).append(managerLife);
       $(gameBoard).append(managerCard);
