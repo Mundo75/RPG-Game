@@ -2,19 +2,24 @@ body {
     background-image: url(../Images/octogon.jpg);
     background-size: cover; 
     
+} 
+
+img {
+    width: 150px;
+    height: 100px;
 }
 
-.divHeading {
-    font-family: 'audiowide', cursive;
-    font-size: 150%;
-   
-    padding-bottom: 0px;
-    margin-bottom: 0px;
+#badGuyList .manager {
+    display: inline-block;
+    background-color: red;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
 }
 
-#textWaitHere {
-    font-family: 'audiowide', cursive;
-    color: gold;
-    padding-top: 0px;
-
+button {
+    width: 180px;
+    margin-top: 100px;
 }
+
+
