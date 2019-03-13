@@ -35,7 +35,7 @@ $(document).ready(function() {
         retaliation: 20
       },
       "Timur \"The Siberian Express\" Dorri": {
-        name: "Timur \"The Siberian Express\" Drrri",
+        name: "Timur \"The Siberian Express\" Dorri",
         life: 160,
         attack: 6,
         audio: "http://www.moviewavs.com/php/sounds/?id=gog&media=MP3S&type=Movies&movie=Team_America_World_Police&quote=sostupid.txt&file=sostupid.mp3",
